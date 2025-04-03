@@ -1,0 +1,12 @@
+# Netlify build configuration
+[build]
+  # Command to build the site
+  command = "npm run build"
+  # Directory containing the built site (relative to the root)
+  publish = "dist"
+
+# Redirect rule for Single Page Applications (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
