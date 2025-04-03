@@ -1,3 +1,18 @@
+// Define types for navigation items
+interface SubItem {
+  id: string;
+  title: string;
+  isQuiz?: boolean; // Optional flag for quiz items
+}
+
+interface NavigationItem {
+  id: string;
+  number: number;
+  title: string;
+  subItems?: SubItem[]; // SubItems are now typed
+  isExam?: boolean; // Optional flag for the final exam
+}
+
 // Chapter color mapping
 export const colorsByChapter: Record<number, string> = {
   1: 'primary-600',
@@ -11,8 +26,8 @@ export const colorsByChapter: Record<number, string> = {
   9: 'red-600'
 };
 
-// Navigation data structure with all 9 chapters
-export const navigationData = [
+// Navigation data structure with all 9 chapters, now typed
+export const navigationData: NavigationItem[] = [
   {
     id: 'introduction',
     number: 1,
@@ -114,3 +129,12 @@ export const navigationData = [
     ]
   }
 ];
+
+// Add Final Exam at the end - Keep this part
+navigationData.push({
+  id: 'final-exam',
+  number: 10, // Assign a new number or handle differently if needed
+  title: 'Final Exam',
+  isExam: true, // Add a flag to identify it as the final exam
+  subItems: [] // No subitems for the final exam
+});
