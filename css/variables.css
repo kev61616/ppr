@@ -1,0 +1,119 @@
+/* PPR Level 2 Certification - CSS Variables */
+
+:root {
+  /* Primary color palette */
+  --primary: #4f46e5; /* Indigo 600 */
+  --primary-light: #818cf8; /* Indigo 400 */
+  --primary-dark: #3730a3; /* Indigo 800 */
+  
+  /* Secondary/accent color palette */
+  --secondary: #f59e0b; /* Amber 500 */
+  --secondary-light: #fbbf24; /* Amber 400 */
+  --secondary-dark: #b45309; /* Amber 700 */
+  
+  /* Neutral colors */
+  --background: #f9fafb; /* Gray 50 */
+  --surface: #ffffff; /* White */
+  --text: #1f2937; /* Gray 800 */
+  --text-light: #6b7280; /* Gray 500 */
+  
+  /* Status colors */
+  --success: #10b981; /* Emerald 500 */
+  --success-light: #d1fae5; /* Emerald 100 */
+  --warning: #f59e0b; /* Amber 500 */
+  --warning-light: #fef3c7; /* Amber 100 */
+  --error: #ef4444; /* Red 500 */
+  --error-light: #fee2e2; /* Red 100 */
+  --info: #3b82f6; /* Blue 500 */
+  --info-light: #dbeafe; /* Blue 100 */
+  
+  /* Accent colors for visual variety */
+  --accent: #8b5cf6; /* Violet 500 */
+  --accent-light: #ede9fe; /* Violet 100 */
+  --accent-alt: #ec4899; /* Pink 500 */
+  --accent-alt-light: #fce7f3; /* Pink 100 */
+  
+  /* Spacing variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border variables */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-full: 9999px;
+  
+  /* Shadow variables */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Typography variables */
+  --font-family-primary: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-family-secondary: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Roboto Mono', monospace;
+  
+  /* Z-index variables */
+  --z-index-dropdown: 10;
+  --z-index-sticky: 20;
+  --z-index-fixed: 30;
+  --z-index-modal-backdrop: 40;
+  --z-index-modal: 50;
+  --z-index-popover: 60;
+  --z-index-tooltip: 70;
+  
+  /* Transition variables */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  
+  /* Specific pickleball colors */
+  --pickleball-blue: #1f5bc4; /* Pickleball court blue */
+  --pickleball-green: #4d9e3f; /* Pickleball court green */
+  --pickleball-yellow: #ffde59; /* Pickleball ball yellow */
+}
+
+/* Dark mode variables (can be toggled with a class on body or html) */
+.dark-mode {
+  --background: #111827; /* Gray 900 */
+  --surface: #1f2937; /* Gray 800 */
+  --text: #f9fafb; /* Gray 50 */
+  --text-light: #d1d5db; /* Gray 300 */
+  
+  /* Adjust colors for dark mode */
+  --primary-light: #6366f1; /* Indigo 500 */
+  --secondary-light: #d97706; /* Amber 600 */
+  --success-light: #059669; /* Emerald 600 */
+  --warning-light: #d97706; /* Amber 600 */
+  --error-light: #dc2626; /* Red 600 */
+  --info-light: #2563eb; /* Blue 600 */
+}
+
+/* Media query for high contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: #3730a3; /* Darker indigo for better contrast */
+    --secondary: #b45309; /* Darker amber for better contrast */
+    --text: #000000; /* Black for maximum contrast */
+    --text-light: #374151; /* Darker gray for better contrast */
+  }
+  
+  .dark-mode {
+    --text: #ffffff; /* White for maximum contrast */
+    --text-light: #f3f4f6; /* Lighter gray for better contrast */
+  }
+}
+
+/* Media query for reduced motion preferences */
+@media (prefers-reduced-motion) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+  }
+}

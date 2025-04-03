@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPR Level 2 Certification Guide | Interactive Lesson</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/practice.css">
+  
+  <!-- JavaScript Components -->
+  <script src="js/components/NavigationManager.js" defer></script>
+  <script src="js/components/ModalManager.js" defer></script>
+  <script src="js/components/CollapsibleManager.js" defer></script>
+  <script src="js/components/QuizManager.js" defer></script>
+  <script src="js/components/ProgressManager.js" defer></script>
+  <script src="js/components/TooltipManager.js" defer></script>
+  <script src="js/components/AnimationManager.js" defer></script>
+  <script src="js/components/PracticeModule.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="min-h-screen">
+  <header class="sticky top-0 bg-white shadow-md z-40">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fas fa-table-tennis-paddle-ball text-indigo-600 text-3xl mr-3 animate-bounce"></i>
+        <h1 class="text-2xl font-bold text-gray-800">PPR Level 2 Certification</h1>
+      </div>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-4">
+          <li><a href="#introduction" class="px-3 py-2 text-gray-700 hover:text-indigo-600 transition-all relative">Introduction
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#grip-techniques" class="px-3 py-2 text-gray-700 hover:text-indigo-600 transition-all relative">Grip Techniques
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#shot-development" class="px-3 py-2 text-gray-700 hover:text-indigo-600 transition-all relative">Shot Development
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#strategy" class="px-3 py-2 text-gray-700 hover:text-indigo-600 transition-all relative">Strategies
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#practice" class="px-3 py-2 text-gray-700 hover:text-indigo-600 transition-all relative">Practice
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
+          </a></li>
+        </ul>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none transition-all">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
+      <ul class="px-4 py-2 space-y-2">
+        <li><a href="#introduction" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-all">Introduction</a></li>
+        <li><a href="#grip-techniques" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-all">Grip Techniques</a></li>
+        <li><a href="#shot-development" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-all">Shot Development</a></li>
+        <li><a href="#strategies" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-all">Strategies</a></li>
+        <li><a href="#practice" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-all">Practice</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row">
+    <aside class="side-nav">
+      <div class="side-nav-header">PPR Level 2 Guide</div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Introduction</div>
+        <a href="#introduction" class="side-nav-item active">About PPR Level 2</a>
+        <div class="side-nav-subsection">
+          <a href="#comparison" class="side-nav-item">Level 1 vs Level 2</a>
+          <a href="#certification" class="side-nav-item">Requirements</a>
+        </div>
+      </div>
+      
+      <div class="side-nav-divider"></div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Fundamentals</div>
+        <a href="#preparation" class="side-nav-item">Equipment & Safety</a>
+        <a href="#first-aid" class="side-nav-item">First Aid</a>
+        <a href="#grip-techniques" class="side-nav-item">Grip Techniques</a>
+        <div class="side-nav-subsection">
+          <a href="#continental" class="side-nav-item">Continental Grip</a>
+          <a href="#eastern" class="side-nav-item">Eastern Grip</a>
+          <a href="#v-shape" class="side-nav-item">V-Shape Grip</a>
+        </div>
+        <a href="#lesson-format" class="side-nav-item">Hourglass Format</a>
+      </div>
+      
+      <div class="side-nav-divider"></div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Techniques</div>
+        <a href="#swing-volley" class="side-nav-item">Swing Volley</a>
+        <a href="#blocking" class="side-nav-item">Blocking & Counter</a>
+        <a href="#lob" class="side-nav-item">The Lob</a>
+        <a href="#overhead" class="side-nav-item">Overhead Shots</a>
+        <div class="side-nav-subsection">
+          <a href="#atp" class="side-nav-item">Around the Post</a>
+          <a href="#erne" class="side-nav-item">The Erne</a>
+        </div>
+      </div>
+      
+      <div class="side-nav-divider"></div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Strategy</div>
+        <a href="#middle-court" class="side-nav-item">Middle Court Tactics</a>
+        <a href="#transition-zone" class="side-nav-item">Transition Zone</a>
+        <div class="side-nav-subsection">
+          <a href="#3rd-shot" class="side-nav-item">3rd Shot Strategy</a>
+          <a href="#4th-shot" class="side-nav-item">4th Shot Strategy</a>
+        </div>
+      </div>
+      
+      <div class="side-nav-divider"></div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Doubles Play</div>
+        <a href="#poaching" class="side-nav-item">Poaching</a>
+        <a href="#serving" class="side-nav-item">Advanced Serves</a>
+        <a href="#returning" class="side-nav-item">Return of Serve</a>
+      </div>
+      
+      <div class="side-nav-divider"></div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Teaching</div>
+        <a href="#lesson-planning" class="side-nav-item">Lesson Planning</a>
+        <a href="#skill-development" class="side-nav-item">Skill Development</a>
+        <a href="#feedback" class="side-nav-item">Giving Feedback</a>
+      </div>
+      
+      <div class="side-nav-divider"></div>
+      
+      <div class="side-nav-section">
+        <div class="side-nav-section-title">Assessment</div>
+        <a href="#practice" class="side-nav-item">Practice Quiz</a>
+        <a href="#certification-exam" class="side-nav-item">Exam Tips</a>
+      </div>
+    </aside>
+
+    <main class="lg:ml-48 w-full">
+      <section id="introduction" class="mb-12">
+        <h2 class="section-title">Introduction to PPR Level 2 Certification</h2>
+        <div class="card mb-6">
+          <p class="mb-4">Welcome to the PPR (Professional Pickleball Registry) Level 2 Certification interactive study guide. This comprehensive resource is designed to help you prepare for your Level 2 certification assessment.</p>
+          <p class="mb-4">As a Level 2 certified instructor, you'll possess the advanced skills, knowledge, and teaching abilities to effectively instruct and coach intermediate to advanced pickleball players. This certification represents a significant step in your professional development as a pickleball instructor.</p>
+        </div>
+        
+        <h3 id="comparison" class="subsection-title">Level 1 vs Level 2: What's Different?</h3>
+        <div class="card mb-6">
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Level 1 (Basic)</th>
+                  <th>Level 2 (Advanced)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Target Students</td>
+                  <td>Beginners, novices</td>
+                  <td>Intermediate, advanced players</td>
+                </tr>
+                <tr>
+                  <td>Technical Knowledge</td>
+                  <td>Basic shots and rules</td>
+                  <td>Advanced techniques, detailed mechanics</td>
+                </tr>
+                <tr>
+                  <td>Teaching Methodology</td>
+                  <td>Simple progression</td>
+                  <td>Hourglass format, detailed feedback</td>
+                </tr>
+                <tr>
+                  <td>Strategy Focus</td>
+                  <td>Basic gameplay</td>
+                  <td>Advanced tactics, court positioning</td>
+                </tr>
+                <tr>
+                  <td>Skill Demonstration</td>
+                  <td>Basic competency</td>
+                  <td>Advanced execution and analysis</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <h3 id="certification" class="subsection-title">Certification Requirements</h3>
+        <div class="card mb-6">
+          <p class="mb-4">To achieve PPR Level 2 certification, you must demonstrate proficiency in:</p>
+          <ol class="list-decimal pl-6 mb-6 space-y-2">
+            <li>Advanced teaching methods and lesson planning for intermediate/advanced players</li>
+            <li>Detailed technical knowledge of all pickleball shots, including specialized techniques</li>
+            <li>Ability to analyze and correct common technical errors</li>
+            <li>Advanced strategic concepts for both singles and doubles play</li>
+            <li>Professional conduct and safety protocols</li>
+          </ol>
+          <div class="tip-card">
+            <h4 class="font-semibold text-blue-700">Certification Tip</h4>
+            <p>Practice your demonstration skills extensively. As a Level 2 instructor, your ability to clearly demonstrate proper technique is critical to the assessment process.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="grip-techniques" class="mb-12">
+        <h2 class="section-title">Advanced Grip Techniques</h2>
+        <div class="card mb-6">
+          <p class="mb-4">While Level 1 certification covers basic grips, Level 2 instructors must have a comprehensive understanding of all grip variations, their advantages, disadvantages, and appropriate applications in different play situations.</p>
+        </div>
+        
+        <h3 id="continental" class="subsection-title">Continental Grip Mastery</h3>
+        <div class="card mb-6">
+          <p class="mb-4">The Continental grip is held like you're shaking hands with the paddle, with the V between thumb and index finger aligned with the edge of the paddle. It's the most versatile grip in pickleball.</p>
+          
+          <div class="flex flex-col md:flex-row gap-6 mb-4">
+            <div class="md:w-1/2">
+              <h4 class="font-semibold text-lg mb-2">Key Teaching Points:</h4>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>V formation between thumb and index finger aligns with the edge of the paddle</li>
+                <li>Relaxed grip pressure - "hold the paddle like a bird"</li>
+                <li>Allows quick transitions between forehand and backhand without changing grip</li>
+                <li>Ideal for volleys, dinks, and net play</li>
+              </ul>
+            </div>
+            <div class="md:w-1/2">
+              <div class="video-placeholder">
+                <i class="fas fa-play-circle text-4xl mb-3"></i>
+                <p>Continental Grip Demonstration</p>
+                <p class="text-xs mt-2">(Click to play video)</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="warning-card">
+            <h4 class="font-semibold text-amber-700">Common Teaching Error</h4>
+            <p>Many instructors fail to emphasize the importance of a relaxed grip. A tight continental grip reduces wrist flexibility and touch, especially during dinking exchanges.</p>
+          </div>
+        </div>
+        
+        <h3 id="eastern" class="subsection-title">Eastern Forehand Grip</h3>
+        <div class="card mb-6">
+          <p class="mb-4">The Eastern forehand grip is similar to a tennis forehand grip, with the base knuckle of the index finger positioned on the third bevel of the paddle handle.</p>
+          
+          <div class="flex flex-col md:flex-row gap-6 mb-4">
+            <div class="md:w-1/2">
+              <h4 class="font-semibold text-lg mb-2">Applications:</h4>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Power groundstrokes from the baseline</li>
+                <li>Driving the ball with topspin</li>
+                <li>Third shot drives</li>
+                <li>Powerful put-away shots</li>
+              </ul>
+            </div>
+            <div class="md:w-1/2">
+              <h4 class="font-semibold text-lg mb-2">Teaching Progression:</h4>
+              <ol class="list-decimal pl-6 space-y-2">
+                <li>Start with Continental grip as reference</li>
+                <li>Rotate hand slightly clockwise (for right-handed players)</li>
+                <li>Place index knuckle on third bevel</li>
+                <li>Ensure comfortable paddle face alignment</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        
+        <h3 id="v-shape" class="subsection-title">V-Shape Grip</h3>
+        <div class="card mb-6">
+          <p class="mb-4">The V-Shape grip is a modification that focuses on creating a clear V-formation between the thumb and index finger, which aligns with the edge of the paddle.</p>
+          
+          <div class="flex flex-col md:flex-row gap-6 mb-4">
+            <div class="md:w-1/2">
+              <h4 class="font-semibold text-lg mb-2">Benefits:</h4>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Enhanced paddle face control</li>
+                <li>Improved feel for dinking and soft shots</li>
+                <li>Natural wrist positioning</li>
+                <li>Reduced risk of "paddle drag" on volleys</li>
+              </ul>
+            </div>
+            <div class="md:w-1/2">
+              <h4 class="font-semibold text-lg mb-2">When to Teach:</h4>
+              <p>Introduce the V-Shape grip to players who:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Struggle with consistent paddle face control</li>
+                <li>Need to improve soft-game precision</li>
+                <li>Have smaller hands or limited grip strength</li>
+                <li>Experience frequent mishits at the non-volley zone</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="tip-card">
+            <h4 class="font-semibold text-blue-700">Teaching Tip</h4>
+            <p>When teaching the V-Shape grip, use the analogy of "shaking hands with the paddle" but emphasize that the V between thumb and index finger should point to the paddle edge, not the face.</p>
+          </div>
+        </div>
+        
+        <div class="collapsible-header">
+          <span>Grip Selection Guide for Different Situations</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="collapsible-content">
+          <div class="p-4">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Playing Situation</th>
+                  <th>Recommended Grip</th>
+                  <th>Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dinking at NVZ</td>
+                  <td>Continental or V-Shape</td>
+                  <td>Better control and touch for soft shots</td>
+                </tr>
+                <tr>
+                  <td>Volleys</td>
+                  <td>Continental</td>
+                  <td>Quick transitions between forehand/backhand</td>
+                </tr>
+                <tr>
+                  <td>Groundstrokes</td>
+                  <td>Eastern Forehand/Backhand</td>
+                  <td>More power and topspin potential</td>
+                </tr>
+                <tr>
+                  <td>Serves</td>
+                  <td>Eastern or Continental</td>
+                  <td>Balance of power and control</td>
+                </tr>
+                <tr>
+                  <td>Third Shot Drops</td>
+                  <td>Continental</td>
+                  <td>Better touch and control for soft shots</td>
+                </tr>
+                <tr>
+                  <td>Overheads</td>
+                  <td>Continental or Eastern</td>
+                  <td>Power with stable paddle face</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-format" class="mb-12">
+        <h2 class="section-title">The Hourglass Lesson Format</h2>
+        <div class="card mb-6">
+          <p class="mb-4">The Hourglass Format is a structured teaching methodology that guides players through different game situations with varying levels of structure. It's named for its conceptual shape—starting wide with open play, narrowing for focused skill work, and then widening again to apply skills in game situations.</p>
+          
+          <div class="flex flex-col md:flex-row gap-6 mb-4">
+            <div class="md:w-1/2">
+              <img src="https://placekitten.com/500/300" alt="Hourglass Format Diagram" class="rounded-lg shadow-md img-zoom">
+            </div>
+            <div class="md:w-1/2">
+              <h4 class="font-semibold text-lg mb-2">Format Structure:</h4>
+              <ol class="list-decimal pl-6 space-y-2">
+                <li><strong>Open:</strong> Free play for observation</li>
+                <li><strong>Semi-Open:</strong> Guided play with specific focus</li>
+                <li><strong>Closed:</strong> Technical skill development</li>
+                <li><strong>Semi-Closed:</strong> Controlled practice drills</li>
+                <li><strong>Open:</strong> Application in game situations</li>
+              </ol>
+            </div>
+          </div>
+          
+          <h4 class="font-semibold text-lg mt-4 mb-2">Recommended Timeline:</h4>
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Phase</th>
+                  <th>Time Allocation</th>
+                  <th>Activities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Open</td>
+                  <td>10-15%</td>
+                  <td>Warm-up games, free play, observation</td>
+                </tr>
+                <tr>
+                  <td>Semi-Open</td>
+                  <td>15-20%</td>
+                  <td>Guided play, focused observation, discussions</td>
+                </tr>
+                <tr>
+                  <td>Closed</td>
+                  <td>30-40%</td>
+                  <td>Skill development, demonstrations, focused practice</td>
+                </tr>
+                <tr>
+                  <td>Semi-Closed</td>
+                  <td>15-20%</td>
+                  <td>Controlled drills, skill application exercises</td>
+                </tr>
+                <tr>
+                  <td>Open</td>
+                  <td>10-15%</td>
+                  <td>Games, competitive play, skill application</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="tip-card mt-6">
+            <h4 class="font-semibold text-blue-700">Implementation Tip</h4>
+            <p>During the transition between phases, clearly communicate the shift in focus to students. This helps them mentally prepare for the change in structure and expectations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="mb-12">
+        <h2 class="section-title">Practice Assessment</h2>
+        
+        <div id="practice-module" class="practice-module">
+          <div id="practice-splash" class="text-center py-8">
+            <h3 class="text-2xl font-bold mb-4">PPR Level 2 Knowledge Check</h3>
+            <p class="mb-6">Test your understanding of key PPR Level 2 concepts before taking the certification exam. This practice quiz covers grip techniques, teaching methodologies, and pickleball strategies.</p>
+            <button id="start-practice" class="btn btn-primary">Start Practice Quiz</button>
+          </div>
+          
+          <div id="question-container" class="hidden">
+            <div class="practice-header">
+              <h3 class="practice-title">Knowledge Assessment</h3>
+              <div class="practice-controls">
+                <span id="question-indicator" class="text-sm text-gray-600">Question 1 of 10</span>
+              </div>
+            </div>
+            
+            <div class="practice-progress">
+              <div class="practice-progress-bar" style="width: 10%"></div>
+            </div>
+            
+            <div class="practice-question active">
+              <h4 id="question-text" class="text-lg font-medium mb-4">Which grip is most versatile for handling a variety of shots including volleys and dinks?</h4>
+              <div id="options-container" class="mt-4 space-y-2">
+                <!-- Options will be inserted here by JavaScript -->
+              </div>
+            </div>
+            
+            <div id="feedback" class="practice-feedback hidden">
+              <h5 id="feedback-title" class="font-semibold mb-1">Correct!</h5>
+              <p id="feedback-text">The Continental grip is the most versatile as it allows for easy transitions between forehand and backhand shots without changing grip, making it ideal for fast-paced exchanges at the net.</p>
+            </div>
+            
+            <div class="mt-6 text-right">
+              <button id="next-question" class="btn btn-primary hidden">Next Question</button>
+            </div>
+          </div>
+          
+          <div id="results-container" class="hidden">
+            <div class="practice-badge" id="score-badge">7</div>
+            <h3 class="text-xl font-bold mb-2">Quiz Complete!</h3>
+            <p class="mb-4">Your score:</p>
+            <div id="final-score" class="practice-score">7/10 (70%)</div>
+            <p id="performance-message" class="mb-6">Good job! You have a solid understanding of PPR Level 2 techniques.</p>
+            <button id="restart-practice" class="btn btn-primary">Try Again</button>
+            <p class="mt-4 text-sm text-gray-600">Review the material on any questions you missed before proceeding to the actual certification.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-xl font-bold mb-4">PPR Level 2 Certification</h3>
+          <p class="text-gray-300 max-w-md">This interactive study guide is designed to help prospective instructors prepare for the PPR Level 2 certification exam.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Official PPR Website</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Equipment Guide</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Certification FAQ</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 PPR Level 2 Interactive Guide. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

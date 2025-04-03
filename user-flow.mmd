@@ -1,0 +1,167 @@
+graph TD
+    %% PPR Level 2 Certification Learning Journey
+    classDef introduction fill:#e8f4fa,stroke:#4f46e5,stroke-width:2px
+    classDef fundamentals fill:#e5ecf6,stroke:#4f46e5,stroke-width:2px
+    classDef techniques fill:#eef2ff,stroke:#4f46e5,stroke-width:2px
+    classDef strategy fill:#f0f9ff,stroke:#4f46e5,stroke-width:2px
+    classDef doubles fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    classDef assessment fill:#f0fdf4,stroke:#10b981,stroke-width:2px
+    classDef practice fill:#fff7ed,stroke:#f59e0b,stroke-width:2px
+    classDef quizSystem fill:#fdf2f8,stroke:#db2777,stroke-width:2px
+    classDef navigation fill:#f8fafc,stroke:#0ea5e9,stroke-width:2px,stroke-dasharray: 5 5
+    
+    %% Main nodes
+    Start(["Start Learning<br>PPR Level 2 Certification"]) --> Nav["Numbered Navigation<br>System"]
+    Nav --> Intro["Ch 1: Introduction<br>About PPR Level 2"]
+    
+    %% Introduction section - Chapter 1
+    subgraph Introduction
+        Intro --> Comparison["Level 1 vs Level 2<br>Certification Comparison"]
+        Comparison --> Requirements["Certification<br>Requirements"]
+    end
+    
+    %% Equipment and Safety - Chapter 2
+    Requirements --> Equipment["Ch 2: Equipment &<br>Safety"]
+    
+    subgraph EquipmentSafety
+        Equipment --> SafetyProtocols["Safety<br>Protocols"]
+        SafetyProtocols --> FirstAid["First Aid<br>Knowledge"]
+    end
+    
+    %% Grip Techniques - Chapter 3
+    FirstAid --> GripTechniques["Ch 3: Grip<br>Techniques"]
+    
+    subgraph GripSection
+        GripTechniques --> ContinentalGrip["Continental<br>Grip"]
+        ContinentalGrip --> EasternGrip["Eastern<br>Grip"]
+        EasternGrip --> VShapeGrip["V-Shape<br>Grip"]
+        VShapeGrip --> SectionQuiz1["Section Quiz:<br>Grip Techniques"]
+    end
+    
+    %% Hourglass Format - Chapter 4
+    SectionQuiz1 --> HourglassFormat["Ch 4: Hourglass<br>Lesson Format"] 
+    
+    subgraph HourglassSection
+        HourglassFormat --> Timeline["Lesson<br>Timeline"]
+        Timeline --> TechnicalCompetencies["Technical<br>Competencies"]
+        TechnicalCompetencies --> TacticalCompetencies["Tactical<br>Competencies"]
+    end
+    
+    %% Opening the Lesson - Chapter 5
+    TacticalCompetencies --> OpeningLesson["Ch 5: Opening<br>the Lesson"]
+    
+    subgraph OpeningSection
+        OpeningLesson --> WarmUp["Warm-Up<br>Procedures"]
+        WarmUp --> AthleteActivation["Athlete<br>Activation"]
+        AthleteActivation --> DynamicStretching["Dynamic<br>Stretching"]
+        DynamicStretching --> AthleticSkillBuild["Athletic Skill<br>Build"]
+    end
+    
+    %% Skill Development - Chapter 6
+    AthleticSkillBuild --> ShotDevelopment["Ch 6: Skill<br>Development"]
+    
+    subgraph ShotTechniques["Shot Techniques"]
+        SwingVolley["Swing<br>Volley"]
+        Lob["The<br>Lob"]
+        Overhead["Overhead<br>Shots"]
+        
+        subgraph SpecialtyShots
+            ATP["Around<br>The Post"]
+            Erne["The<br>Erne"]
+        end
+    end
+    
+    ShotDevelopment --> SwingVolley
+    SwingVolley --> Lob
+    Lob --> Overhead
+    Overhead --> ATP
+    ATP --> Erne
+    Erne --> SectionQuiz2["Section Quiz:<br>Shot Techniques"]
+    
+    %% Advanced Strategies - Chapter 7
+    SectionQuiz2 --> Strategy["Ch 7: Advanced<br>Strategies"]
+    
+    subgraph StrategyTechniques
+        MiddleCourt["Middle Court<br>Opportunities"]
+        TransitionZone["Transition<br>Zone"]
+        Poaching["Poaching<br>Techniques"]
+        ServeStrategies["Serve<br>Strategies"]
+        ReturnStrategies["Return<br>Strategies"]
+        Stacking["Stacking<br>Techniques"]
+        DoublesStrategy["Doubles<br>Strategy"]
+    end
+    
+    Strategy --> MiddleCourt
+    MiddleCourt --> TransitionZone
+    TransitionZone --> Poaching
+    Poaching --> ServeStrategies
+    ServeStrategies --> ReturnStrategies
+    ReturnStrategies --> Stacking
+    Stacking --> DoublesStrategy
+    DoublesStrategy --> SectionQuiz3["Section Quiz:<br>Strategy"]
+    
+    %% Midterm Assessment
+    SectionQuiz3 --> MidtermAssessment["Midterm Assessment:<br>Multiple Topics"]
+    
+    %% Closing the Lesson - Chapter 8
+    MidtermAssessment --> LessonClosing["Ch 8: Closing<br>the Lesson"]
+    
+    subgraph ClosingSection
+        LessonClosing --> StaticCoolDown["Static<br>Cool Down"]
+        StaticCoolDown --> LessonRecap["Lesson<br>Recap"]
+        LessonRecap --> Homework["Student<br>Homework"]
+    end
+    
+    %% Additional Resources - Chapter 9
+    Homework --> AdditionalResources["Ch 9: Additional<br>Resources"]
+    
+    subgraph ResourcesSection
+        AdditionalResources --> Drills["Pickleball<br>Drills"]
+        Drills --> Games["Practice<br>Games"]
+        Games --> Conclusion["Conclusion"]
+    end
+    
+    %% Final Assessment
+    Conclusion --> FinalTest["Final Comprehensive<br>Assessment"]
+    
+    %% End of Learning Journey
+    FinalTest --> Certification["PPR Level 2<br>Certification Ready!"]
+    
+    %% Notes on content with original images
+    subgraph ImagesImplemented["Implemented with Original Images"]
+        IG_Continental["Continental Grip<br>✓ Original Image"]
+        IG_Eastern["Eastern Grip<br>✓ Original Images (2)"]
+        IG_VShape["V-Shape Grip<br>✓ Original Image"]
+        IG_Hourglass["Hourglass Format<br>✓ Original Diagram"]
+        IG_Transition["Transition Zone<br>✓ Original Diagram"]
+    end
+    
+    %% Notes on component architecture
+    subgraph ComponentArchitecture["Modular Component Architecture"]
+        CompNav["Navigation.tsx<br>Top & Side Navigation"]
+        CompChapterSection["ChapterSection.tsx<br>Reusable Chapter Components"]
+        CompChapters["Chapters.tsx<br>Individual Chapter Content"]
+        CompQuiz["Quiz Components<br>Assessment Systems"]
+    end
+    
+    ContinentalGrip --- IG_Continental
+    EasternGrip --- IG_Eastern
+    VShapeGrip --- IG_VShape
+    HourglassFormat --- IG_Hourglass
+    TransitionZone --- IG_Transition
+    
+    %% Apply classes to nodes
+    class Nav navigation;
+    class Intro,Comparison,Requirements introduction;
+    class Equipment,SafetyProtocols,FirstAid fundamentals;
+    class GripTechniques,ContinentalGrip,EasternGrip,VShapeGrip fundamentals;
+    class HourglassFormat,Timeline,TechnicalCompetencies,TacticalCompetencies fundamentals;
+    class OpeningLesson,WarmUp,AthleteActivation,DynamicStretching,AthleticSkillBuild fundamentals;
+    class ShotDevelopment,SwingVolley,Lob,Overhead,ATP,Erne techniques;
+    class Strategy,MiddleCourt,TransitionZone,Poaching,ServeStrategies,ReturnStrategies,Stacking,DoublesStrategy strategy;
+    class LessonClosing,StaticCoolDown,LessonRecap,Homework assessment;
+    class AdditionalResources,Drills,Games,Conclusion practice;
+    class Certification practice;
+    class SectionQuiz1,SectionQuiz2,SectionQuiz3,MidtermAssessment,FinalTest quizSystem;
+    class IG_Continental,IG_Eastern,IG_VShape,IG_Hourglass,IG_Transition fill:#f0fff4,stroke:#059669,stroke-width:2px;
+    class CompNav,CompChapterSection,CompChapters,CompQuiz fill:#f0f9ff,stroke:#0284c7,stroke-width:2px;

@@ -1,0 +1,127 @@
+/* PPR Level 2 Certification - Navigation Styles */
+
+/* Side navigation */
+.side-nav {
+  @apply hidden lg:block fixed top-24 left-4 w-40 bg-white rounded-lg shadow-md overflow-y-auto max-h-[calc(100vh-8rem)];
+  transition: all 0.3s ease;
+}
+
+.side-nav:hover {
+  @apply shadow-lg;
+  transform: translateX(2px);
+}
+
+.side-nav-header {
+  @apply py-3 px-4 font-bold text-sm uppercase tracking-wider rounded-t-lg;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.side-nav-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 1s;
+}
+
+.side-nav:hover .side-nav-header::after {
+  transform: translateX(100%);
+}
+
+.side-nav-section {
+  @apply py-1 px-2;
+}
+
+.side-nav-section-title {
+  @apply text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 py-2 border-b border-gray-100;
+  position: relative;
+}
+
+.side-nav-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: var(--primary-light);
+  transition: width 0.3s ease;
+}
+
+.side-nav-section:hover .side-nav-section-title::after {
+  width: 70%;
+}
+
+.side-nav-item {
+  @apply block px-3 py-1.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 rounded-md transition-all cursor-pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.side-nav-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.2s ease;
+}
+
+.side-nav-item:hover::after {
+  width: 100%;
+}
+
+.side-nav-item.active {
+  @apply bg-indigo-100 text-indigo-700 font-medium;
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+.side-nav-subsection {
+  @apply pl-4 mt-1 border-l border-indigo-100;
+}
+
+.side-nav-divider {
+  @apply my-1 border-t border-gray-100;
+  position: relative;
+}
+
+.side-nav-divider::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 10%;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(to right, var(--primary-light), transparent);
+}
+
+/* Header and mobile navigation */
+header {
+  @apply sticky top-0 bg-white shadow-md z-40;
+}
+
+header .container {
+  @apply mx-auto px-4 py-4 flex justify-between items-center;
+}
+
+.mobile-menu {
+  @apply hidden md:hidden bg-white shadow-inner;
+}
+
+.mobile-menu.visible {
+  @apply block;
+}
+
+.mobile-menu a {
+  @apply block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-all;
+}
